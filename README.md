@@ -9,6 +9,13 @@ HackerRank Orchestrate "Message Notification Router" and uses the same labels:
 - `message_type`: `personal | urgent | event | payment | business_update | promotion | greeting | forward | spam | scam | unknown`
 - plus `reason`, `confidence`, `evidence_ids` (ids of past messages that influenced the decision)
 
+## Screenshots
+
+| Home: live alert + today's impact | Digest: held messages | Settings: on-device Gemma 4 |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/home-feed.jpg" width="260" alt="Home feed with a strict-mode alert for an urgent message and the Today impact card"> | <img src="docs/screenshots/digest.jpg" width="260" alt="Digest tab showing held messages, including a sticker Gemma looked at"> | <img src="docs/screenshots/settings.jpg" width="260" alt="Settings with strict mode on and Gemma 4 ready on GPU with vision and MTP"> |
+| An urgent message rings through strict mode; 5 of 9 messages were kept from interrupting. Every card shows the decision, reason, confidence, and on-device latency. | Messages that can wait, with "Open chat" and one-tap corrections. Gemma read the sticker image itself. | Routing, strict mode, and quiet hours. The model runs locally: GPU + vision + MTP, ready in ~7 s. |
+
 ## How it works
 
 ```
